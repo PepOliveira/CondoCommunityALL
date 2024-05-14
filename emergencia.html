@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Emergência</title>
+    <link rel="stylesheet" href="styleemergencia.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Qual é a sua emergência?</h1>
+        <form id="emergencyForm">
+            <div class="form-group">
+                <label for="emergencyLocation" id="locationLabel">Onde precisa de ajuda?</label>
+                <select id="emergencyLocation" name="emergencyLocation" onchange="hideLabel('locationLabel')">
+                    <option value="piscina">Piscina</option>
+                    <option value="calçada">Calçada</option>
+                    <option value="janela">Janela</option>
+                    <option value="luz_do_condominio">Luz do Condomínio</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="emergencyDescription" id="descriptionLabel">Descreva o que aconteceu</label>
+                <textarea id="emergencyDescription" name="emergencyDescription" rows="4" cols="50" required oninput="hideLabel('descriptionLabel')"></textarea>
+            </div>
+            <button class="button-42" role="button">Enviar</button>
+        </form>
+    </div>
+  <a href="index.html" button class="button-back" > Voltar a pagina principal </button>
+    <script src="emergencia.js"></script>
+</body>
+</html>
